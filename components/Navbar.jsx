@@ -7,7 +7,7 @@ const navLinks = [
   { label: "Services", href: "#services" },
   { label: "Products", href: "#products" },
   { label: "Subscribe", href: "#subscribe" },
-  { label: "Footer", href: "#footer" },
+  
 ];
 
 export default function Navbar() {

@@ -28,23 +28,26 @@ const socials = [
 export default function Footer() {
   return (
     <footer id="footer" className="border-t border-white/[0.06] bg-[#080C17]">
-      <div className="mx-auto max-w-6xl px-8 py-20">
+      <div className="2xl:container mx-auto px-4 py-20 sm:px-6 lg:px-8">
         {/* Top grid */}
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="lg:col-span-2">
             <a href="#home" className="mb-5 flex items-center gap-2.5">
-              <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-500 text-white font-black text-xs shadow-lg shadow-indigo-500/20">
+              <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-500 text-xs font-black text-white shadow-lg shadow-indigo-500/20">
                 TN
               </span>
+
               <span className="text-lg font-black tracking-tight text-white">
                 Tech<span className="text-indigo-400">Nova</span>
               </span>
             </a>
+
             <p className="max-w-xs text-sm leading-relaxed text-slate-400">
               Your trusted destination for premium smartphones, laptops,
               accessories, and the latest technology — delivered worldwide.
             </p>
+
             <div className="mt-7 flex gap-2.5">
               {socials.map(({ Icon, href, label }) => (
                 <a
@@ -59,11 +62,12 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Navigation */}
           <div>
             <h3 className="mb-5 text-[11px] font-bold uppercase tracking-widest text-slate-500">
               Navigation
             </h3>
+
             <ul className="flex flex-col gap-3">
               {navLinks.map((link) => (
                 <li key={link.href}>
@@ -83,19 +87,30 @@ export default function Footer() {
             <h3 className="mb-5 text-[11px] font-bold uppercase tracking-widest text-slate-500">
               Contact
             </h3>
+
             <ul className="flex flex-col gap-3 text-sm text-slate-400">
               <li>
-                <a href="mailto:hello@technova.com" className="hover:text-white transition-colors">
+                <a
+                  href="mailto:hello@technova.com"
+                  className="transition-colors hover:text-white"
+                >
                   hello@technova.com
                 </a>
               </li>
+
               <li>
-                <a href="tel:+15550001234" className="hover:text-white transition-colors">
+                <a
+                  href="tel:+15550001234"
+                  className="transition-colors hover:text-white"
+                >
                   +1 (555) 000-1234
                 </a>
               </li>
-              <li className="text-slate-500 text-xs leading-relaxed">
-                Mon – Fri<br />9 AM – 6 PM EST
+
+              <li className="text-xs leading-relaxed text-slate-500">
+                Mon – Fri
+                <br />
+                9 AM – 6 PM EST
               </li>
             </ul>
           </div>
@@ -107,6 +122,7 @@ export default function Footer() {
             <p className="text-xs text-slate-500">
               © {new Date().getFullYear()} TechNova. All rights reserved.
             </p>
+
             <nav className="flex flex-wrap gap-6">
               {legalLinks.map((link) => (
                 <a

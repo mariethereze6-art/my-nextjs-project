@@ -84,7 +84,7 @@ const services = [
 export default function Services() {
   return (
     <section id="services" className="bg-[#0A0F1E] py-32">
-      <div className="mx-auto flex w-full max-w-7xl flex-col items-center px-6 lg:px-8">
+      <div className="2xl:container mx-auto flex w-full flex-col items-center px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-20 max-w-3xl text-center">
           <p className="mb-4 text-xs font-bold uppercase tracking-[0.25em] text-indigo-400">
@@ -102,7 +102,7 @@ export default function Services() {
         </div>
 
         {/* Cards */}
-        <div className="mx-auto grid max-w-6xl gap-8 sm:grid-cols-2 lg:grid-cols-4 justify-items-center">
+        <div className="mx-auto grid max-w-6xl justify-items-center gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {services.map((service) => (
             <div
               key={service.title}
@@ -113,15 +113,15 @@ export default function Services() {
                 {service.icon}
               </div>
 
-              <h3 className="mb-4 text-center text-xl font-bold text-white">
+              <h3 className="mb-4 text-xl font-bold text-white">
                 {service.title}
               </h3>
 
-              <p className="text-center text-base leading-7 text-slate-400">
+              <p className="text-base leading-7 text-slate-400">
                 {service.description}
               </p>
 
-              {/* Glow Effect */}
+              {/* Glow */}
               <div className="pointer-events-none absolute -right-10 -top-10 h-24 w-24 rounded-full bg-indigo-500/0 blur-3xl transition-all duration-300 group-hover:bg-indigo-500/20" />
             </div>
           ))}

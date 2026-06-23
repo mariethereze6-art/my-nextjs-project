@@ -23,73 +23,77 @@ export default function Hero() {
       />
 
       {/* Content */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center px-8 text-center">
-        {/* Eyebrow */}
-        <div className="mb-10 inline-flex items-center gap-2.5 rounded-full border border-white/[0.08] bg-white/[0.03] px-5 py-2 backdrop-blur-sm">
-          <span className="h-1.5 w-1.5 rounded-full bg-indigo-400" />
-          <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-slate-400">
-            Premium Technology Store
-          </span>
-        </div>
-
-        {/* Heading */}
-        <h1 className="mx-auto max-w-[720px] text-4xl font-bold leading-[1.25] tracking-[-0.02em] text-white sm:text-5xl lg:text-[3.75rem] lg:leading-[1.2]">
-          Discover premium{" "}
-          <span className="bg-gradient-to-r from-indigo-400 via-violet-400 to-indigo-300 bg-clip-text text-transparent">
-            smartphones, laptops, headphones...
-          </span>
-        </h1>
-
-        {/* Divider */}
-        <div className="mx-auto mb-10 mt-10 h-px w-20 bg-gradient-to-r from-transparent via-indigo-500/40 to-transparent" />
-
-        {/* CTAs */}
-        <div className="flex flex-col items-center justify-center gap-3.5 sm:flex-row">
-          <a
-            href="#products"
-            className="group inline-flex items-center gap-2.5 rounded-xl bg-indigo-500 px-8 py-3.5 text-[13px] font-bold tracking-wide text-white shadow-xl shadow-indigo-500/20 transition-all duration-300 hover:bg-indigo-400 hover:shadow-indigo-400/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0F1E]"
-          >
-            Shop Now
-            <svg
-              className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2.5}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
-          </a>
-
-          <a
-            href="#services"
-            className="inline-flex items-center gap-2 rounded-xl border border-white/[0.08] bg-white/[0.03] px-8 py-3.5 text-[13px] font-semibold tracking-wide text-slate-300 transition-all duration-300 hover:border-white/[0.13] hover:bg-white/[0.07] hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0F1E]"
-          >
-            Explore Services
-          </a>
-        </div>
-
-        {/* Trust strip */}
-        <div className="mt-16 flex flex-wrap items-center justify-center gap-8 sm:gap-14">
-          {[
-            { stat: "50K+", label: "Customers" },
-            { stat: "4.9★", label: "Average Rating" },
-            { stat: "120+", label: "Countries" },
-            { stat: "2 Yr", label: "Warranty" },
-          ].map(({ stat, label }) => (
-            <div key={label} className="flex flex-col items-center gap-1">
-              <span className="text-base font-black tracking-tight text-white">
-                {stat}
-              </span>
-              <span className="text-[10px] font-semibold uppercase tracking-widest text-slate-500">
-                {label}
+      <div className="absolute inset-0 flex items-center">
+        <div className="2xl:container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col items-center text-center">
+            {/* Eyebrow */}
+            <div className="mb-10 inline-flex items-center gap-2.5 rounded-full border border-white/[0.08] bg-white/[0.03] px-5 py-2 backdrop-blur-sm">
+              <span className="h-1.5 w-1.5 rounded-full bg-indigo-400" />
+              <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-slate-400">
+                Premium Technology Store
               </span>
             </div>
-          ))}
+
+            {/* Heading */}
+            <h1 className="mx-auto max-w-[720px] text-4xl font-bold leading-[1.25] tracking-[-0.02em] text-white sm:text-5xl lg:text-[3.75rem] lg:leading-[1.2]">
+              Discover premium{" "}
+              <span className="bg-gradient-to-r from-indigo-400 via-violet-400 to-indigo-300 bg-clip-text text-transparent">
+                smartphones, laptops, headphones...
+              </span>
+            </h1>
+
+            {/* Divider */}
+            <div className="mx-auto mb-10 mt-10 h-px w-20 bg-gradient-to-r from-transparent via-indigo-500/40 to-transparent" />
+
+            {/* CTA */}
+            <div className="flex flex-col items-center justify-center gap-3.5 sm:flex-row">
+              <a
+                href="#products"
+                className="group inline-flex items-center gap-2.5 rounded-xl bg-indigo-500 px-8 py-3.5 text-[13px] font-bold tracking-wide text-white shadow-xl shadow-indigo-500/20 transition-all duration-300 hover:bg-indigo-400 hover:shadow-indigo-400/30"
+              >
+                Shop Now
+                <svg
+                  className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2.5}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="#services"
+                className="inline-flex items-center gap-2 rounded-xl border border-white/[0.08] bg-white/[0.03] px-8 py-3.5 text-[13px] font-semibold tracking-wide text-slate-300 transition-all duration-300 hover:border-white/[0.13] hover:bg-white/[0.07] hover:text-white"
+              >
+                Explore Services
+              </a>
+            </div>
+
+            {/* Trust strip */}
+            <div className="mt-16 flex flex-wrap items-center justify-center gap-8 sm:gap-14">
+              {[
+                { stat: "50K+", label: "Customers" },
+                { stat: "4.9★", label: "Average Rating" },
+                { stat: "120+", label: "Countries" },
+                { stat: "2 Yr", label: "Warranty" },
+              ].map(({ stat, label }) => (
+                <div key={label} className="flex flex-col items-center gap-1">
+                  <span className="text-base font-black tracking-tight text-white">
+                    {stat}
+                  </span>
+                  <span className="text-[10px] font-semibold uppercase tracking-widest text-slate-500">
+                    {label}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
 

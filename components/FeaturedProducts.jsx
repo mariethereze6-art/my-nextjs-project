@@ -56,7 +56,7 @@ function ArrowIcon() {
 export default function FeaturedProducts() {
   return (
     <section id="products" className="bg-[#0D1120] py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="2xl:container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mx-auto mb-16 w-full max-w-4xl text-center">
           <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-indigo-400">
@@ -78,7 +78,7 @@ export default function FeaturedProducts() {
           {products.map((product) => {
             const badgeClass =
               badgeColors[product.badge] ||
-              "bg-slate-500/20 text-slate-300 border border-slate-500/20";
+              "border border-slate-500/20 bg-slate-500/20 text-slate-300";
 
             return (
               <article
@@ -120,7 +120,7 @@ export default function FeaturedProducts() {
 
                   <button
                     type="button"
-                    className="group cursor-pointer flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 py-3 font-semibold text-slate-300 transition-all duration-200 hover:border-indigo-500/30 hover:bg-indigo-500/10 hover:text-white"
+                    className="group flex cursor-pointer items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 py-3 font-semibold text-slate-300 transition-all duration-200 hover:border-indigo-500/30 hover:bg-indigo-500/10 hover:text-white"
                   >
                     View Details
                     <ArrowIcon />
@@ -138,7 +138,7 @@ export default function FeaturedProducts() {
         <div className="mt-24 text-center">
           <a
             href="#"
-            className="group cursor-pointer inline-flex items-center gap-2 text-base font-semibold text-slate-400 transition-colors duration-200 hover:text-white"
+            className="group inline-flex cursor-pointer items-center gap-2 text-base font-semibold text-slate-400 transition-colors duration-200 hover:text-white"
           >
             View all products
             <ArrowIcon />

@@ -42,3 +42,26 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #2d3560;
 }
+
+/* add to app/globals.css */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.06);
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 9999px;
+  backdrop-filter: blur(8px);
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 14px !important;
+  font-weight: 700;
+}
+.swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.3);
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  background: #6366f1;
+}

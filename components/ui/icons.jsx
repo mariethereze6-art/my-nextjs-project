@@ -20,3 +20,12 @@ export function CheckIcon({ className = "h-7 w-7" }) {
     </svg>
   );
 }
+
+export function SearchIcon({ className = "h-4 w-4" }) {
+  return (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+      <circle cx="11" cy="11" r="7" strokeLinecap="round" strokeLinejoin="round" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-4.35-4.35" />
+    </svg>
+  );
+}

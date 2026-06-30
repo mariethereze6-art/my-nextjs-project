@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
 @import "tailwindcss";
-
+ 
 html {
   scroll-behavior: smooth;
 }
-
+ 
 @layer base {
   *, *::before, *::after {
     margin: 0;
@@ -20,7 +20,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+ 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
@@ -28,7 +28,7 @@ body {
     transition-duration: 0.01ms !important;
   }
 }
-
+ 
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -42,26 +42,80 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #2d3560;
 }
-
-/* add to app/globals.css */
+ 
+/* Swiper — navigation arrows */
 .swiper-button-next,
 .swiper-button-prev {
-  color: #fff;
-  background: rgba(255, 255, 255, 0.06);
-  width: 40px !important;
-  height: 40px !important;
-  border-radius: 9999px;
+  color: #fff !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  width: 42px !important;
+  height: 42px !important;
+  border-radius: 9999px !important;
   backdrop-filter: blur(8px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25) !important;
+  transition: background-color 0.25s ease, border-color 0.25s ease,
+    transform 0.2s ease, box-shadow 0.25s ease;
 }
 .swiper-button-next::after,
 .swiper-button-prev::after {
   font-size: 14px !important;
   font-weight: 700;
 }
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: rgba(99, 102, 241, 0.22) !important;
+  border-color: rgba(99, 102, 241, 0.4) !important;
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.2) !important;
+}
+.swiper-button-next:active,
+.swiper-button-prev:active {
+  transform: scale(0.92);
+  background: rgba(99, 102, 241, 0.32) !important;
+}
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+  opacity: 0.35 !important;
+  cursor: not-allowed;
+  background: rgba(255, 255, 255, 0.04) !important;
+  border-color: rgba(255, 255, 255, 0.06) !important;
+  box-shadow: none !important;
+  pointer-events: none;
+}
+ 
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+ 
+/* Swiper — pagination dots */
 .swiper-pagination-bullet {
-  background: rgba(255, 255, 255, 0.3);
-  opacity: 1;
+  background: rgba(255, 255, 255, 0.45) !important;
+  opacity: 1 !important;
+  width: 7px !important;
+  height: 7px !important;
+  transition: background-color 0.25s ease, width 0.25s ease, opacity 0.25s ease;
+}
+.swiper-pagination-bullet:hover {
+  background: rgba(255, 255, 255, 0.7) !important;
 }
 .swiper-pagination-bullet-active {
-  background: #6366f1;
+  background: #6366f1 !important;
+  width: 22px !important;
+  border-radius: 9999px !important;
+}
+ 
+@media (max-width: 640px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 34px !important;
+    height: 34px !important;
+  }
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 11px !important;
+  }
 }

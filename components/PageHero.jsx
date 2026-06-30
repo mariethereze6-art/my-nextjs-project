@@ -1,11 +1,11 @@
-// components/PageHero.jsx
+
 import Container from "./ui/Container";
 import AtmosphereBackground from "./ui/AtmosphereBackground";
 
 export default function PageHero({ eyebrow, title, subtitle }) {
   return (
     <section className="relative overflow-hidden bg-[#0A0F1E] pb-24 pt-44">
-      <AtmosphereBackground />
+      <AtmosphereBackground compact />
       <Container className="relative text-center">
         <div className="mb-8 inline-flex items-center gap-2.5 rounded-full border border-white/[0.08] bg-white/[0.03] px-5 py-2 backdrop-blur-sm">
           <span className="h-1.5 w-1.5 rounded-full bg-indigo-400" />
@@ -18,6 +18,10 @@ export default function PageHero({ eyebrow, title, subtitle }) {
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-400">{subtitle}</p>
         )}
       </Container>
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0A0F1E] to-transparent"
+      />
     </section>
   );
 }

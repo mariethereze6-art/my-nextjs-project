@@ -9,6 +9,8 @@ import "swiper/css/pagination";
 import ProductCard from "./ui/ProductCard";
 
 export default function ProductsSwiper({ products }) {
+  const enableLoop = products.length > 3;
+
   return (
     <Swiper
       modules={[Navigation, Pagination, Autoplay]}
@@ -16,11 +18,20 @@ export default function ProductsSwiper({ products }) {
       slidesPerView={1}
       navigation
       pagination={{ clickable: true }}
-      autoplay={{ delay: 4500, disableOnInteraction: false }}
+      loop={enableLoop}
+      autoplay={{ delay: 4500, disableOnInteraction: false, pauseOnMouseEnter: true }}
       breakpoints={{
         640: { slidesPerView: 1.2 },
         768: { slidesPerView: 2 },
         1024: { slidesPerView: 3 },
+      }}
+      a11y={{
+        prevSlideMessage: "Previous product",
+        nextSlideMessage: "Next product",
+      }}
+      style={{
+        "--swiper-navigation-top-offset": "136px",
+        "--swiper-navigation-sides-offset": "16px",
       }}
       className="!pb-14"
     >

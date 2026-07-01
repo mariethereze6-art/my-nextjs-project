@@ -8,7 +8,7 @@ const defaultStats = [
 
 export default function StatsStrip({ stats = defaultStats, className = "" }) {
   return (
-    <div className={`flex flex-wrap items-center justify-center gap-8 sm:gap-14 ${className}`}>
+    <div className={`flex flex-wrap items-center justify-center gap-6 sm:gap-14 ${className}`}>
       {stats.map(({ stat, label }) => (
         <div key={label} className="flex flex-col items-center gap-1">
           <span className="text-base font-black tracking-tight text-white">{stat}</span>

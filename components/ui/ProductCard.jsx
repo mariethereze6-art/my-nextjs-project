@@ -15,7 +15,7 @@ export default function ProductCard({ product }) {
 
   return (
     <article className="group relative flex h-full w-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-sm transition-all duration-300 hover:border-indigo-500/30 hover:shadow-2xl hover:shadow-indigo-500/10">
-      <div className="relative h-64 overflow-hidden bg-[#111827]">
+      <div className="relative h-48 overflow-hidden bg-[#111827] sm:h-64">
         <Image
           src={product.image}
           alt={product.name}
@@ -30,17 +30,17 @@ export default function ProductCard({ product }) {
         )}
       </div>
 
-      <div className="flex flex-1 flex-col p-6">
-        <div className="mb-4 flex items-start justify-between gap-4">
-          <h3 className="text-xl font-bold text-white">{product.name}</h3>
-          <span className="shrink-0 text-lg font-bold text-indigo-400">{product.price}</span>
+      <div className="flex flex-1 flex-col p-4 sm:p-6">
+        <div className="mb-3 flex items-start justify-between gap-4 sm:mb-4">
+          <h3 className="text-lg font-bold text-white sm:text-xl">{product.name}</h3>
+          <span className="shrink-0 text-base font-bold text-indigo-400 sm:text-lg">{product.price}</span>
         </div>
 
-        <p className="mb-6 flex-1 text-base leading-7 text-slate-400">{product.description}</p>
+        <p className="mb-4 flex-1 text-sm leading-6 text-slate-400 sm:mb-6 sm:text-base sm:leading-7">{product.description}</p>
 
         <button
           type="button"
-          className="group flex cursor-pointer items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 py-3 font-semibold text-slate-300 transition-all duration-200 hover:border-indigo-500/30 hover:bg-indigo-500/10 hover:text-white"
+          className="group flex cursor-pointer items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 py-2.5 text-sm font-semibold text-slate-300 transition-all duration-200 hover:border-indigo-500/30 hover:bg-indigo-500/10 hover:text-white sm:py-3"
         >
           View Details
           <ArrowIcon />

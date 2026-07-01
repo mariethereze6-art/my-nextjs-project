@@ -1,4 +1,4 @@
-// components/Subscribe.jsx  (only the changed parts)
+// components/Subscribe.jsx
 "use client";
 
 import { useState } from "react";
@@ -33,10 +33,7 @@ export default function Subscribe() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const newErrors = validate(fields);
-    if (Object.values(newErrors).some(Boolean)) {
-      setErrors(newErrors);
-      return;
-    }
+    if (Object.values(newErrors).some(Boolean)) { setErrors(newErrors); return; }
     setLoading(true);
     await new Promise((r) => setTimeout(r, 1200));
     setLoading(false);
@@ -44,22 +41,22 @@ export default function Subscribe() {
   };
 
   return (
-    <section id="subscribe" className="relative bg-[#0A0F1E] py-28">
+    <section id="subscribe" className="relative bg-[#0A0F1E] py-14 md:py-28">
       <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
         <div className="absolute left-1/2 top-1/2 h-[400px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-indigo-700/10 blur-[100px]" />
       </div>
 
       <div className="2xl:container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative mx-auto max-w-lg">
-          <div className="mb-10 text-center">
+          <div className="mb-7 text-center md:mb-10">
             <p className="mb-3 text-xs font-bold uppercase tracking-widest text-indigo-400">Newsletter</p>
-            <h2 className="text-4xl font-black tracking-tight text-white sm:text-5xl">Stay in the loop</h2>
-            <p className="mt-4 text-base text-slate-400">
+            <h2 className="text-3xl font-black tracking-tight text-white sm:text-4xl md:text-5xl">Stay in the loop</h2>
+            <p className="mt-3 text-sm text-slate-400 md:mt-4 md:text-base">
               Get early access to new products, exclusive deals, and tech insights — no spam, ever.
             </p>
           </div>
 
-          <div className="rounded-2xl border border-white/[0.07] bg-white/[0.03] p-8 backdrop-blur-sm">
+          <div className="rounded-2xl border border-white/[0.07] bg-white/[0.03] p-6 backdrop-blur-sm md:p-8">
             {submitted ? (
               <div className="flex flex-col items-center gap-4 py-6 text-center">
                 <div className="flex h-14 w-14 items-center justify-center rounded-full bg-emerald-500/15 text-emerald-400">
@@ -73,11 +70,10 @@ export default function Subscribe() {
                 </div>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-5">
+              <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-4 md:gap-5">
                 <FormField id="name" label="Full Name" placeholder="Jane Smith" value={fields.name} onChange={handleChange} error={errors.name} autoComplete="name" />
                 <FormField id="email" label="Email Address" type="email" placeholder="jane@example.com" value={fields.email} onChange={handleChange} error={errors.email} autoComplete="email" />
                 <FormField id="phone" label="Phone Number (optional)" type="tel" placeholder="+1 555 000 0000" value={fields.phone} onChange={handleChange} error={errors.phone} autoComplete="tel" />
-
                 <button
                   type="submit"
                   disabled={loading}
@@ -85,7 +81,6 @@ export default function Subscribe() {
                 >
                   {loading ? "Subscribing…" : "Subscribe Now"}
                 </button>
-
                 <p className="text-center text-xs text-slate-500">
                   By subscribing you agree to our{" "}
                   <a href="#" className="text-slate-400 underline underline-offset-2 hover:text-white">Privacy Policy</a>.

@@ -45,7 +45,7 @@ export default function ContactPage() {
         subtitle="Have a question about an order, a product, or a partnership? We'd love to hear from you."
       />
 
-      <section className="bg-[#0A0F1E] pb-32">
+      <section className="bg-[#0A0F1E] pb-16 md:pb-32">
         <Container>
           <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
             <ContactForm />
@@ -57,7 +57,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="mt-16 overflow-hidden rounded-2xl border border-white/[0.07]">
+          <div className="mt-10 overflow-hidden rounded-2xl border border-white/[0.07] md:mt-16">
             <iframe
               title="TechNova location map"
               src="https://maps.google.com/maps?q=San%20Francisco&t=&z=13&ie=UTF8&iwloc=&output=embed"

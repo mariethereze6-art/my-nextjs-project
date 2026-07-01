@@ -83,41 +83,41 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="bg-[#0A0F1E] py-32">
+    <section id="services" className="bg-[#0A0F1E] py-16 md:py-32">
       <div className="2xl:container mx-auto flex w-full flex-col items-center px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="mb-20 max-w-3xl text-center">
-          <p className="mb-4 text-xs font-bold uppercase tracking-[0.25em] text-indigo-400">
+        <div className="mb-12 max-w-3xl text-center md:mb-20">
+          <p className="mb-3 text-xs font-bold uppercase tracking-[0.25em] text-indigo-400 md:mb-4">
             Why Choose Us
           </p>
 
-          <h2 className="text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl">
+          <h2 className="text-3xl font-black tracking-tight text-white sm:text-4xl lg:text-5xl xl:text-6xl">
             Built around your experience
           </h2>
 
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-400">
+          <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-slate-400 md:mt-6 md:text-lg">
             Every feature we offer is designed to make your shopping journey
             seamless, safe, and satisfying.
           </p>
         </div>
 
         {/* Cards */}
-        <div className="mx-auto grid max-w-6xl justify-items-center gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mx-auto grid max-w-6xl justify-items-center gap-6 sm:grid-cols-2 md:gap-8 lg:grid-cols-4">
           {services.map((service) => (
             <div
               key={service.title}
-              className="group relative flex min-h-[320px] w-full max-w-[320px] flex-col items-center overflow-hidden rounded-3xl border border-white/[0.06] bg-white/[0.03] p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-indigo-500/30 hover:bg-indigo-500/[0.05] hover:shadow-2xl hover:shadow-indigo-500/10"
+              className="group relative flex w-full max-w-[320px] flex-col items-center overflow-hidden rounded-3xl border border-white/[0.06] bg-white/[0.03] p-6 text-center transition-all duration-300 hover:-translate-y-2 hover:border-indigo-500/30 hover:bg-indigo-500/[0.05] hover:shadow-2xl hover:shadow-indigo-500/10 sm:min-h-[300px] sm:p-8 lg:min-h-[320px]"
             >
               {/* Icon */}
-              <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl border border-indigo-500/20 bg-indigo-500/10 text-indigo-400">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl border border-indigo-500/20 bg-indigo-500/10 text-indigo-400 sm:mb-6 sm:h-16 sm:w-16">
                 {service.icon}
               </div>
 
-              <h3 className="mb-4 text-xl font-bold text-white">
+              <h3 className="mb-3 text-lg font-bold text-white sm:mb-4 sm:text-xl">
                 {service.title}
               </h3>
 
-              <p className="text-base leading-7 text-slate-400">
+              <p className="text-sm leading-6 text-slate-400 sm:text-base sm:leading-7">
                 {service.description}
               </p>
 

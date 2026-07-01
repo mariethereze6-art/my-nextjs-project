@@ -27,7 +27,7 @@ export default function Hero() {
               </span>
             </h1>
 
-            <div className="mx-auto mb-10 mt-10 h-px w-20 bg-gradient-to-r from-transparent via-indigo-500/40 to-transparent" />
+            <div className="mx-auto mb-7 mt-7 h-px w-20 bg-gradient-to-r from-transparent via-indigo-500/40 to-transparent md:mb-10 md:mt-10" />
 
             <div className="flex flex-col items-center justify-center gap-3.5 sm:flex-row">
               <Button href="/products" variant="primary">
@@ -40,7 +40,7 @@ export default function Hero() {
               </Button>
             </div>
 
-            <StatsStrip className="mt-16" />
+            <StatsStrip className="mt-10 md:mt-16" />
           </div>
         </Container>
       </div>

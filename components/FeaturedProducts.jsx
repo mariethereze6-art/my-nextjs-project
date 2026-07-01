@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export default function FeaturedProducts() {
   return (
-    <section id="products" className="bg-[#0D1120] py-32">
+    <section id="products" className="bg-[#0D1120] py-16 md:py-32">
       <Container>
         <SectionHeading
           eyebrow="Featured Products"
@@ -18,7 +18,7 @@ export default function FeaturedProducts() {
 
         <ProductsSwiper products={featuredProducts} />
 
-        <div className="mt-12 text-center">
+        <div className="mt-8 text-center md:mt-12">
           <Link
             href="/products"
             className="group inline-flex items-center gap-2 text-base font-semibold text-slate-400 transition-colors duration-200 hover:text-white"
